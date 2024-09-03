@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 30px 10px 30px;
+        width: max-content;
+        text-align: left;
+      }
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 30px 10px 30px;
+        width: max-content;
+        text-align: left;
+      }
+      .no-border td,
+      .no-border tr {
+        border: none !important;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0 10vw;
+      padding: 10px;
+      width: 750px;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+    "
+  >
+  
+    <table  cellspacing="0" cellpadding="0" width="100%">
+      
+      <tr style="background-color: #fff ;">
+        <td style="width: 50%">
+          <table cellspacing="0" cellpadding="0" width="100%">
+            <tr style="width: 100%" class="no-border">
+              <td style="width: 100%" class="no-border">
+                <div
+                  style="
+                    padding: 10px;
+                    color: #2e2929;
+                    font-size: 20px;
+                    font-weight: 400;
+                    width: 100%;
+                  "
+                >
+                Mail’s title : Votre commande sur Hilma Biocare a été reçue
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="background: #8d63ff; padding: 20px">
+                
+                <h1 style="color: aliceblue; margin: 0; padding: 0 40px">
+                  [LISEZ BIEN CE MAIL JUSQU'AU BOUT] – Détails de paiement
+                </h1>
+              </td>
+            </tr>
+            <tr>
+              <td style="background: #fff; padding: 40px">
+                <p>Bonjour $billingName,</p>
+                <p>
+                  Nous vous remercions pour votre achat et votre confiance ! Voici le résumé de votre commande :
+                </p>
+                <p style="font-weight: 700; color: blue; font-size: 18px">
+                  [Commande n°$orderId] ($date)
+                </p>
+                <table cellspacing="0" cellpadding="10px" width="100%">
+                  <tr>
+                    <th style="border-bottom: 1px solid black">Produit</th>
+                    <th style="border-bottom: 1px solid black">Quantité</th>
+                    <th style="border-bottom: 1px solid black">Prix</th>
+                  </tr>
+                  $productsPlaceholder
+                </table>
+                <table cellspacing="0" cellpadding="0" width="100%">
+                  <tr>
+                    <td style="font-weight: 700">Sous-total :</td>
+                    <td>€$subtotal</td>
+                  </tr>
+                  <tr>
+                    <td style="color: black; font-weight: 700">Expédition :</td>
+                    <td>
+                      €$shipping_total via Envoi international (5-10 jours) SANS
+                      garantie
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="color: black; font-weight: 700">
+                      Moyen de paiement :
+                    </td>
+                    <td>$payment_method_title</td>
+                  </tr>
+                  <tr>
+                    <td style="color: black; font-weight: 700">Total :</td>
+                    <td>€$total</td>
+                  </tr>
+                </table>
+                <!-- Address section -->
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 20px; background: #fff">
+                <div
+                  style="
+                    display: flex;
+                    font-weight: 700;
+                    color: rgb(94, 179, 253);
+                  "
+                >
+                  <p style="margin-right: 40%">Adresse de facturation</p>
+                  <p>Adresse de livraison</p>
+                </div>
+                <div style="display: flex; width: 100%">
+                  <div
+                    style="border: 1px solid black; width: 50%; padding: 10px"
+                  >
+                    <p style="margin: 0; padding: 0; color: black">
+                      $billingAddress_1
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $billingAddress_2
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $billingCity
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $billingState
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $billingPostcode
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $billingCountry
+                    </p>
+                    
+                  </div>
+                  <div
+                    style="border: 1px solid black; width: 50%; padding: 10px"
+                  >
+                    <p style="margin: 0; padding: 0; color: black">
+                      $shippingAddress_1
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $shippingAddress_2
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $shippingCity
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $shippingState
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $shippingPostcode
+                    </p>
+                    <p style="margin: 0; padding: 0; color: black">
+                      $shippingCountry
+                    </p>
+                    
+                  </div>
+                </div>
+                <div style="padding-top: 3%">
+                  <p style="margin: 0; padding: 0; color: black">
+                    $shippingPhoneNo
+                  </p>
+                  <p style="margin-bottom: 5px; padding: 0;">
+                    $billingEmail
+                  </p>
+                  
+                  <p style="margin: 0; padding: 0">
+                    Nous commençons la préparation de votre colis et nous l'expédions au plus vite.
+                  </p>
+                  <p style="margin: 0; padding: 0; margin-top: 3%">
+                    Vous recevrez également un numéro de suivi sous 2-3 jours ouvrés afin de suivre l'évolution de votre envoi.
+                  </p>
+                  <p style="margin: 0; padding: 0; margin-top: 3%">
+                    Avec nos meilleures salutations
+                  </p>
+                  <p style="margin: 0; padding: 0; margin-top: 3%">
+                    L’équipe Hilma Biocare
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

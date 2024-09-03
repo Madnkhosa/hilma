@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.blurred-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  height: 100%;
+  
+  backdrop-filter: blur(8px); /* Adjust the blur intensity as needed */
+  z-index: 1200; /* Ensure the blurred background is behind the modal */
+}
+@media (max-width: 768px) {
+  .table-flex {
+    display: flex;
+    flex-direction: column;
+
+  }}
+
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
+
+  @media screen and ((min-width: 430px) and (max-width: 550px)),
+  screen and ((min-width: 770px) and (max-width: 830px)),
+  screen and ((min-width: 1028px) and (max-width: 1112px)) {
+.textsize {
+font-size: 12px;
+gap: 0px;
+padding: 0px 2px;
+}
+}
+
+.dhsdgg{
+  z-index: 200;
+  position: absolute;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  cursor: pointer;
+}
+.line-clam {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  cursor: pointer;
+}
+/* globals.css */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+.carousel .carousel-status {
+  right: 29px !important
+}
+/* Add these styles in your CSS file */
+
+.svg-class {
+  fill: #000000; /* Change the color as needed */
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 30px 10px 30px;
+        width: max-content;
+        text-align: left;
+      }
+      table {
+        /* border: 1px solid black; */
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #fff;
+      }
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 30px 10px 30px;
+        width: max-content;
+        text-align: left;
+      }
+      .no-border td,
+      .no-border tr {
+        border: none !important;
+      }
+      .DisPly {
+        display: flex !important;
+      }
+      .Padding {
+        padding: 10px !important;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 10px;
+      padding: 5px;
+      width: 750px;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+    "
+  >
+    <table class="Padding" cellspacing="0" cellpadding="0" width="100%">
+      <tr style="width: 100%" class="no-border">
+        <td style="width: 100%" class="no-border">
+          <div
+            style="
+              padding: 10px;
+              color: #2e2929;
+              font-size: 20px;
+              font-weight: 400;
+              width: 100%;
+            "
+          >
+            Mail’s title :  commande sur Hilma Biocare a été reçue
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="background: #8d63ff; padding: 20px">
+          <h1 style="color: aliceblue; padding: 10px; width: 100%">
+            [LISEZ BIEN CE MAIL JUSQU'AU BOUT] – Détails de paiement
+          </h1>
+        </td>
+      </tr>
+      <tr>
+        <td style="background: #fff; padding: 40px">
+          <p>Bonjour $billingName,</p>
+          <p>
+            Merci pour votre commande. Elle restera en attente jusqu’à ce que
+            nous ayons confirmation de la réception du paiement.
+          </p>
+          <p
+            style="
+              padding: 10px 0;
+              font-size: 20px;
+              color: #155ca8;
+              font-weight: 600;
+            "
+          >
+            Nos coordonnées bancaires
+          </p>
+          <p>Bénéficiaire: Digital Conception</p>
+          <p>IBAN: DK4489000023658232</p>
+          <p>Numéro de compte: 0023658232</p>
+          <p>BIC/SWIFT: SXPYDKKK</p>
+          <p>Banque: Banking Circle S.A.</p>
+          <p>Pays: Denmark</p>
+          <p>Adresse: Amerika Plads, 38, 2100 Copenhagen</p>
+          <p>
+            Merci de ne pas indiquer le motif de la transaction tel que
+            stéroïdes, anabolisants, dopage,...
+          </p>
+          <p>Veuillez indiquer uniquement le numéro de la commande.</p>
+          NE MENTIONNEZ SURTOUT PAS HILMA BIOCARE DANS LE DESTINATAIRE ! Le
+          destinataire doit être Digital Conception uniquement !
+          <p style="font-weight: 700; color: blue; font-size: 18px">
+            [Commande n°$orderId] ($date)
+          </p>
+          <table cellspacing="0" cellpadding="10px" width="100%">
+            <tr>
+              <th style="border-bottom: 1px solid black">Produit</th>
+              <th style="border-bottom: 1px solid black">Quantité</th>
+              <th style="border-bottom: 1px solid black">Prix</th>
+            </tr>
+            $productsPlaceholder
+          </table>
+          <table cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td style="font-weight: 700">Sous-total :</td>
+              <td>€$subtotal</td>
+            </tr>
+            <tr>
+              <td style="color: black; font-weight: 700">Expédition :</td>
+              <td>
+                €$shipping_total via Envoi international (5-10 jours) SANS
+                garantie
+              </td>
+            </tr>
+            <tr>
+              <td style="color: black; font-weight: 700">
+                Moyen de paiement :
+              </td>
+              <td>Virement bancaire (NE PAS MENTIONNER HILMA BIOCARE)</td>
+            </tr>
+            <tr>
+              <td style="color: black; font-weight: 700">Total :</td>
+              <td>€$total</td>
+            </tr>
+          </table>
+          <!-- Address section -->
+        </td>
+      </tr>
+
+      <table style="width: 100%" cellspacing="0" cellpadding="0">
+        <tr style="width: 100%">
+          <td
+            style="background: #fff; font-weight: 700; color: rgb(94, 179, 253)"
+          >
+            Adresse de facturation
+          </td>
+          <td
+            style="background: #fff; font-weight: 700; color: rgb(94, 179, 253)"
+          >
+            Adresse de livraison
+          </td>
+        </tr>
+        <tr style="width: 100%">
+          <td style="width: 50%">
+            <div style="width: 50%">
+              <p style="margin: 0; padding: 0; color: black ; min-width: max-content">
+                $billingAddress_1
+              </p>
+              <p style="margin: 0; padding: 0; color: black; min-width: max-content">
+                $billingAddress_2
+              </p>
+              <p style="margin: 0; padding: 0; color: black ; min-width: max-content">$billingCity</p>
+              <p style="margin: 0; padding: 0; color: black; min-width: max-content">$billingState</p>
+              <p style="margin: 0; padding: 0; color: black; min-width: max-content">
+                $billingPostcode
+              </p>
+              <p
+                style="
+                  margin: 0;
+                  padding: 0;
+                  color: black;
+                  min-width: max-content;
+                "
+              >
+                $billingCountry
+              </p>
+         
+            </div>
+          </td>
+          <td style="width: 50%">
+            <div style="width: 50%">
+              <p style="margin: 0; padding: 0; color: black ; min-width: max-content">
+                $shippingAddress_1
+              </p>
+              <p style="margin: 0; padding: 0; color: black ; min-width: max-content">
+                $shippingAddress_2
+              </p>
+              <p
+                style="
+                  margin: 0;
+                  padding: 0;
+                  color: black;
+                  min-width: max-content;
+                "
+              >
+                $shippingCity
+              </p>
+              <p
+                style="
+                  margin: 0;
+                  padding: 0;
+                  color: black;
+                  min-width: max-content;
+                "
+              >
+                $shippingState
+              </p>
+              <p
+                style="
+                  margin: 0;
+                  padding: 0;
+                  color: black;
+                  min-width: max-content;
+                "
+              >
+                $shippingPostcode
+              </p>
+              <p
+                style="
+                  margin: 0;
+                  padding: 0;
+                  color: black;
+                  min-width: max-content;
+                "
+              >
+                $shippingCountry
+              </p>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div style="padding: 3%; background-color: #fff; border: 1px solid black">
+        <p style="margin: 0; padding: 0; color: black">$shippingPhoneNo</p>
+        <p style="margin: 0; padding-bottom: 5px;">$billingEmail</p>
+
+        <p style="margin: 0; padding: 0">
+          N’hésitez pas à nous faire savoir si un problème technique vous a
+          empêché le transfert bancaire.
+        </p>
+
+        <p style="margin: 0; padding: 0; margin-top: 3%">
+          Avec nos meilleures salutations
+        </p>
+        <p style="margin: 0; padding: 0; margin-top: 3%">
+          L’équipe Hilma Biocare
+        </p>
+      </div>
+    </table>
+  </body>
+</html>
